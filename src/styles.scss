@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import './colors';
+
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 100%;
+    height: 100vh;
+}
+main,
+section,
+nav,
+div {
+    display: flex;
+}
+body {
+    background-color: $dark;
+}
