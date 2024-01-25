@@ -46,6 +46,7 @@
         flex-grow: 1;
         justify-content: space-between;
         font-size: 38px;
+        font-weight: 300;
     }
     .light {
         color: $light;
@@ -53,13 +54,13 @@
     .name {
         color: $green;
         font-weight: 700;
-        animation: nameFonts 10s linear infinite alternate;
+        animation: nameFonts 4s linear infinite alternate;
         font-size: 36px;
     }
     .blue {
         color: $blue;
         font-size: 32px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .thin {
         color: $light;

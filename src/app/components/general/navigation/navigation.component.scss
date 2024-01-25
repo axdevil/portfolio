@@ -20,12 +20,15 @@ nav {
         border: none;
         cursor: pointer;
         color: $light;
+        font-family: 'Chivo Mono', monospace;
     }
     button:hover {
         background-color: $purple;
         color: $dark;
     }
     i {
+        position: relative;
+        top: 3px;
         font-size: 24px;
     }
 }
