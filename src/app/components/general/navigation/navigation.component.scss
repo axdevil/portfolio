@@ -1,17 +1,31 @@
 @import '../../../../colors';
 
+.bottom {
+    height: 32px;
+    padding: 8px 16px;
+    div {
+        gap: 8px;
+    }
+}
+.left {
+    width: 32px;
+    height: calc(100vh - 64px);
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    div {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
 nav {
     justify-content: space-between;
-    height: 32px;
     margin: 16px;
-    padding: 8px 16px;
     border-radius: 8px;
     background-color: $dark2;
     box-shadow: 0px 0px 4px 0px rgba($color: #000000, $alpha: 0.2);
 
-    div {
-        gap: 8px;
-    }
     button {
         margin: 0;
         padding: 0 8px;

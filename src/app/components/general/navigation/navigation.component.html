@@ -1,9 +1,10 @@
-<nav>
+<nav [class]="changeClass()">
     <div>
         <button><i class="fi fi-brands-github"></i></button>
+        <button (click)="changeSection(0)" [hidden]="!(numSection > 0)">Home</button>
     </div>
     <div>
-        <button>Skills</button>
+        <button (click)="changeSection(1)">Skills</button>
         <button>Work</button>
         <button>Achiviements</button>
     </div>
