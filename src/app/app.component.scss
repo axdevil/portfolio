@@ -1,7 +1,10 @@
 @import '../colors';
 
-main {
+.column {
     flex-direction: column-reverse;
+}
+.row {
+    flex-direction: row;
 }
 section {
     flex-grow: 1;
