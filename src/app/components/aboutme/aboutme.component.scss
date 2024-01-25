@@ -1,0 +1,31 @@
+@import '../../../colors';
+
+.image {
+    position: relative;
+    height: 190px + 32px;
+    width: 190px + 32px;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        position: absolute;
+        height: 190px + 32px;
+        width: 190px + 32px;
+        background: linear-gradient($red, $blue);
+        border-radius: 50%;
+        animation: gradient 8s linear infinite;
+    }
+    img {
+        position: absolute;
+        border-radius: 50%;
+        width: 190px;
+    }
+}
+@keyframes gradient {
+    to {
+        transform: rotateZ(0deg);
+    }
+    from {
+        transform: rotateZ(360deg);
+    }
+}
