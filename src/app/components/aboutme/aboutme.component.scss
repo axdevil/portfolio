@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalnia:wght@700&family=Orbitron:wght@700&display=swap');
 @import '../../../colors';
 
+.box {
+    gap: 32px;
+}
 .image {
     position: relative;
     height: 190px + 32px;
@@ -7,7 +11,7 @@
     justify-content: center;
     align-items: center;
 
-    div{
+    div {
         position: absolute;
         height: 190px + 32px;
         width: 190px + 32px;
@@ -27,5 +31,67 @@
     }
     from {
         transform: rotateZ(360deg);
+    }
+}
+
+.me {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+
+    p {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        font-size: 38px;
+    }
+    .light {
+        color: $light;
+    }
+    .name {
+        color: $green;
+        font-weight: 700;
+        animation: nameFonts 10s linear infinite alternate;
+        font-size: 36px;
+    }
+    .blue {
+        color: $blue;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .thin {
+        color: $light;
+        font-weight: 100;
+        font-size: 24px;
+    }
+    button {
+        border: 1px solid $light;
+        border-radius: 4px;
+        background: none;
+        color: $light;
+        padding: 8px 16px;
+    }
+    button:hover {
+        background-color: $light;
+        color: $dark;
+    }
+}
+@keyframes nameFonts {
+    0% {
+        font-family: 'Geologica', sans-serif;
+    }
+    25% {
+        font-family: 'Dancing Script', cursive;
+    }
+    50% {
+        font-family: 'Chivo Mono', monospace;
+    }
+    75% {
+        font-family: 'Orbitron', sans-serif;
+    }
+    100% {
+        font-family: 'Kalnia', serif;
     }
 }
