@@ -3,3 +3,8 @@
 main {
     flex-direction: column-reverse;
 }
+section {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
