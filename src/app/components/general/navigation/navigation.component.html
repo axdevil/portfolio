@@ -1,14 +1,14 @@
 <nav [class]="changeClass()">
     <div>
-        <button><i class="fi fi-brands-github"></i></button>
-        <button (click)="changeSection(0)" [hidden]="!(numSection > 0)">Home</button>
+        <a href="https://www.github.com/GRJorge" target="_blank" [hidden]="!(numSection === 0)"><i class="fi fi-brands-github"></i></a>
+        <button (click)="changeSection(0)" [hidden]="!(numSection > 0)"><i class="fi fi-sr-home"></i></button>
     </div>
     <div>
-        <button (click)="changeSection(1)">Skills</button>
-        <button>Work</button>
-        <button>Achiviements</button>
+        <button (click)="changeSection(1)">@if (numSection === 0) {Skills} @else {<i class="fi fi-sr-book-bookmark"></i>}</button>
+        <button>@if (numSection === 0) {Work} @else {<i class="fi fi-sr-briefcase"></i>}</button>
+        <button>@if (numSection === 0) {Achiviements} @else {<i class="fi fi-sr-medal"></i>}</button>
     </div>
     <div>
-        <button><i class="fi fi-br-sun"></i></button>
+        <button><i class="fi fi-sr-sun"></i></button>
     </div>
 </nav>
