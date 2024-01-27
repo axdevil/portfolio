@@ -1,0 +1,42 @@
+@import '../../../colors';
+
+section {
+    flex-direction: column;
+    gap: 8px;
+
+    h1 {
+        font-size: 30px;
+        position: relative;
+    }
+    h1::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 88%;
+        top: calc(50% - 1px);
+        right: 0;
+        background-color: $light;
+    }
+    > div {
+        gap: 8px;
+    }
+    .category {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: $dark2;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            position: relative;
+            background-color: $dark2;
+        }
+        div {
+            gap: 8px;
+        }
+    }
+}
