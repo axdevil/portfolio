@@ -1,13 +1,14 @@
 @import '../colors';
 
+.content {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
 .column {
     flex-direction: column-reverse;
 }
 .row {
     flex-direction: row;
-}
-section {
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
 }

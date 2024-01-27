@@ -1,7 +1,7 @@
 <main (wheel)="scroll($event)" [class]="changeClass()">
-    <navigation (changeSectionEvent)="setSection($event)" [numSection]="numSection"/>
-    <section>
-        <aboutme [hidden]="!(numSection === 0)"/>
-        <skills [hidden]="!(numSection === 1)"/>
-    </section>
+    <navigation (changeSectionEvent)="setSection($event)" [numSection]="numSection" />
+    <div class="content">
+        <aboutme [hidden]="!(numSection === 0)" />
+        <skills [hidden]="!(numSection === 1)" />
+    </div>
 </main>
