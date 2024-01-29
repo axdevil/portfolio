@@ -4,16 +4,17 @@ import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/general/navigation/navigation.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { GreetingComponent } from './components/greeting/greeting.component';
+import { WorkComponent } from './components/work/work.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent, SkillsComponent],
+    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent, SkillsComponent, WorkComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    numSection = 1;
+    numSection = 2;
 
     setSection(section: number) {
         this.numSection = section;
