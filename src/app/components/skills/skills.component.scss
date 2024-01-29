@@ -4,19 +4,6 @@ section {
     flex-direction: column;
     gap: 8px;
 
-    h1 {
-        font-size: 30px;
-        position: relative;
-    }
-    h1::before {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 88%;
-        top: calc(50% - 1px);
-        right: 0;
-        background-color: $light;
-    }
     > div {
         gap: 8px;
     }
