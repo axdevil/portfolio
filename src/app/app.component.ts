@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/general/navigation/navigation.component';
@@ -8,7 +8,7 @@ import { GreetingComponent } from './components/greeting/greeting.component';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent,SkillsComponent],
+    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent, SkillsComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
@@ -52,6 +52,15 @@ export class AppComponent {
             return 'column';
         } else {
             return 'row';
+        }
+    }
+
+    @HostListener('window:keydown', ['$event'])
+    handleKeyboardEvent(event: KeyboardEvent) {
+        if (event.key === 'ArrowUp' || event.key === 'w') {
+            this.changeSection(-1);
+        } else if (event.key === 'ArrowDown' || event.key === 's') {
+            this.changeSection(1);
         }
     }
 }
