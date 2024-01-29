@@ -5,7 +5,7 @@
     </div>
     <div>
         <button (click)="changeSection(1)">@if (numSection === 0) {Skills} @else {<i class="fi fi-sr-book-bookmark"></i>}</button>
-        <button>@if (numSection === 0) {Work} @else {<i class="fi fi-sr-briefcase"></i>}</button>
+        <button (click)="changeSection(2)">@if (numSection === 0) {Work} @else {<i class="fi fi-sr-briefcase"></i>}</button>
         <button>@if (numSection === 0) {Achiviements} @else {<i class="fi fi-sr-medal"></i>}</button>
     </div>
     <div>
