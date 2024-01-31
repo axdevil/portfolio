@@ -1,5 +1,5 @@
 @import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
-@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&display=swap');
 @import './colors';
@@ -46,20 +46,6 @@ button {
 
 .shadow {
     box-shadow: 0px 0px 4px 0px rgba($color: #000000, $alpha: 0.2);
-}
-
-.title {
-    font-size: 30px;
-    position: relative;
-}
-.title::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 88%;
-    top: calc(50% - 1px);
-    right: 0;
-    background-color: $light;
 }
 
 .bgred {
