@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WorkCardComponent } from './work-card/work-card.component';
+import workDataJSON from '../../data/work.json';
 
 @Component({
     selector: 'work',
@@ -8,4 +9,6 @@ import { WorkCardComponent } from './work-card/work-card.component';
     templateUrl: './work.component.html',
     styleUrl: './work.component.scss',
 })
-export class WorkComponent {}
+export class WorkComponent {
+    workData: any = workDataJSON;
+}
