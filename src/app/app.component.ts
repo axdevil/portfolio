@@ -21,19 +21,20 @@ export class AppComponent {
     }
 
     //CAMBIO DE SECTION MEDIANTE SCROLL
-    scrollDelay = 0;
+    canScroll = true;
     scroll(event: WheelEvent) {
-        const scrollMax = 2;
-
-        if (Math.sign(event.deltaY) === -1) {
-            this.scrollDelay -= 1;
-        } else {
-            this.scrollDelay += 1;
+        if (this.canScroll) {
+            this.changeSection(Math.sign(event.deltaY));
+            this.canScroll = false;
         }
 
-        if (this.scrollDelay === scrollMax || this.scrollDelay === -scrollMax) {
-            this.changeSection(Math.sign(this.scrollDelay));
-            this.scrollDelay = 0;
+        const scrollDelay = 1000;
+
+        if (!this.canScroll) {
+            setTimeout(() => {
+                this.canScroll = true;
+                return;
+            }, scrollDelay);
         }
     }
 
@@ -44,15 +45,6 @@ export class AppComponent {
             this.numSection = 0;
         } else if (this.numSection > 3) {
             this.numSection = 3;
-        }
-    }
-
-    //CAMBIAR CLASES CONFORME SECCION
-    changeClass(): string {
-        if (this.numSection === 0) {
-            return 'column';
-        } else {
-            return 'row';
         }
     }
 

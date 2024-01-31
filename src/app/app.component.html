@@ -1,4 +1,4 @@
-<main (wheel)="scroll($event)" [class]="changeClass()">
+<main (wheel)="scroll($event)">
     <navigation (changeSectionEvent)="setSection($event)" [numSection]="numSection" />
     <div class="content">
         <greeting [hidden]="!(numSection === 0)" />
