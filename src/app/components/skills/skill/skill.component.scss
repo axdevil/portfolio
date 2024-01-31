@@ -18,13 +18,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        color: $light;
         gap: 4px;
 
         .name {
+            color: $light3;
             font-weight: 600;
         }
         .percentage {
+            color: $light3;
             font-size: 13px;
         }
     }
