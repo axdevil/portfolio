@@ -6,7 +6,7 @@
     <div class="navigation">
         <button [class.currentSection]="numSection === 1" (click)="changeSection(1)">Skills</button>
         <button [class.currentSection]="numSection === 2" (click)="changeSection(2)">Featured Work</button>
-        <button>Achiviements</button>
+        <button [class.currentSection]="numSection === 3" (click)="changeSection(3)">Achiviements</button>
     </div>
     <div class="more">
         <button class="contactButton" [hidden]="!(numSection > 0)">Contact me</button>

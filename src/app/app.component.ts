@@ -5,16 +5,17 @@ import { NavigationComponent } from './components/general/navigation/navigation.
 import { SkillsComponent } from './components/skills/skills.component';
 import { GreetingComponent } from './components/greeting/greeting.component';
 import { WorkComponent } from './components/work/work.component';
+import { AchiviementsComponent } from './components/achiviements/achiviements.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent, SkillsComponent, WorkComponent],
+    imports: [CommonModule, RouterOutlet, NavigationComponent, GreetingComponent, SkillsComponent, WorkComponent, AchiviementsComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    numSection = 2;
+    numSection = 3;
 
     setSection(section: number) {
         this.numSection = section;
