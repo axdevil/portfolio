@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Ghostlike",
+        "image": "ghostlike.png",
+        "description": "Video game created in seven days for the game jam 'Tu juego a juicio Jam' with the theme 'too long'.",
+        "tags": ["GDScript", "Godot Engine", "Inkscape"],
+        "webpage": "https://staid-cat.itch.io/ghostlike"
+    }
+]
