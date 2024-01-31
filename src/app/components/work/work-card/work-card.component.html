@@ -1,8 +1,13 @@
-<div class="card shadow">
-    <img src="../../../../assets/Ghostlike.png" >
+<div class="card">
+    <img class="shadow" src="../../../../assets/work/{{ image }}">
 
-    <div>
-        <button>View Details</button>
-        <a href="https://staid-cat.itch.io/ghostlike" target="_blank">Link</a>
+    <div class="info">
+        <p>{{ description }}</p>
+        <div class="tags">
+            @for (tag of tags; track $index) {
+                <span>{{ tag }}</span>
+            }
+        </div>
+        <a [href]="webpage" target="_blank">Visit <i class="fi fi-sr-angle-small-right"></i></a>
     </div>
 </div>

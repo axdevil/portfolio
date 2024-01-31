@@ -2,47 +2,71 @@
 
 .card {
     position: relative;
-    border-radius: 8px;
-    cursor: pointer;
 
     img {
-        height: 128px;
-        width: 256px;
+        width: 350px;
+        height: 200px;
         object-fit: cover;
         border-radius: 8px;
     }
-    div {
+
+    .info {
         display: none;
-        flex-direction: column;
         position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 16px;
         width: 100%;
         height: 100%;
         border-radius: 8px;
-        gap: 4px;
-        justify-content: center;
-        align-items: center;
+        background: rgba($color: $dark, $alpha: 0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
 
-        button,
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .tags {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+
+            span {
+                padding: 0 8px;
+                border-radius: 32px;
+                background-color: $purple;
+                color: $dark;
+                cursor: default;
+            }
+        }
+
         a {
             padding: 8px 16px;
-            background-color: $purple;
-            border: none;
             border-radius: 4px;
-            font-size: 14px;
             text-decoration: none;
+            background-color: $green;
+            color: $dark;
+
+            i {
+                color: $dark;
+            }
         }
-        button:hover,
         a:hover {
             background-color: $dark;
+            color: $light;
+            i {
+                color: $light;
+            }
         }
     }
 }
 
 .card:hover {
-    div {
+    .info {
         display: flex;
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(2.4px);
-        -webkit-backdrop-filter: blur(2.4px);
     }
 }
