@@ -1,12 +1,12 @@
 <nav class="shadow">
     <div>
         <a href="https://www.github.com/GRJorge" target="_blank" [hidden]="!(numSection === 0)"><i class="fi fi-brands-github"></i></a>
-        <button (click)="changeSection(0)" [hidden]="!(numSection > 0)"><i class="fi fi-ss-home"></i></button>
+        <button (click)="changeSection(0)" [hidden]="!(numSection > 0)"><i class="fi fi-ss-hand-wave"></i></button>
     </div>
     <div class="navigation">
-        <button [class.currentSection]="numSection === 1" (click)="changeSection(1)">Skills</button>
-        <button [class.currentSection]="numSection === 2" (click)="changeSection(2)">Featured Work</button>
-        <button [class.currentSection]="numSection === 3" (click)="changeSection(3)">Achiviements</button>
+        <button [class.currentSection]="numSection === 1" (click)="changeSection(1)">About Me</button>
+        <button [class.currentSection]="numSection === 2" (click)="changeSection(2)">Skills</button>
+        <button [class.currentSection]="numSection === 3" (click)="changeSection(3)">Featured Work</button>
     </div>
     <div class="more">
         <button class="contactButton" [hidden]="!(numSection > 0)">Contact me</button>

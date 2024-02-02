@@ -2,8 +2,8 @@
     <navigation (changeSectionEvent)="setSection($event)" [numSection]="numSection" />
     <div class="content">
         <greeting [hidden]="!(numSection === 0)" />
-        <skills [hidden]="!(numSection === 1)" />
-        <work [hidden]="!(numSection === 2)" />
-        <achiviements [hidden]="!(numSection === 3)"/>
+        <aboutme [hidden]="!(numSection === 1)"/>
+        <skills [hidden]="!(numSection === 2)" />
+        <work [hidden]="!(numSection === 3)" />
     </div>
 </main>
