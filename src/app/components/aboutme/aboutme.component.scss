@@ -1,0 +1,46 @@
+@import '../../../colors';
+
+section {
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    line-height: 1.6;
+    gap: 16px;
+    text-align: justify;
+
+    > div {
+        flex-direction: column;
+        gap: 16px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    b {
+        font-weight: 700;
+    }
+    h1,
+    h2 {
+        text-align: center;
+        font-family: 'Chivo Mono';
+    }
+    .me {
+        i {
+            color: $red;
+        }
+    }
+    .awards {
+        div {
+            background-color: $dark2;
+            font-size: 13px;
+            justify-content: space-between;
+            padding: 8px;
+            align-items: center;
+            border-radius: 8px;
+
+            i {
+                font-size: 16px;
+                color: $yellow;
+            }
+        }
+    }
+}
