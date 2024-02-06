@@ -1,10 +1,30 @@
 @import '../colors';
 
-main{
+main {
     flex-direction: column-reverse;
 }
 .content {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
+}
+.title {
+    justify-content: center;
+    padding: 8px 0;
+
+    span {
+        position: relative;
+        font-weight: 700;
+        font-size: 26px;
+    }
+    span::after {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 1px;
+        margin-top: 4px;
+        top: 100%;
+        left: -50%;
+        background-color: $light;
+    }
 }

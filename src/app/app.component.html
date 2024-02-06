@@ -6,4 +6,9 @@
         <skills [hidden]="!(numSection === 2)" />
         <work [hidden]="!(numSection === 3)" />
     </div>
+    @if (numSection > 0) {
+        <div class="title">
+            <span class="mono">{{ changeTitle() }}</span>
+        </div>
+    }
 </main>

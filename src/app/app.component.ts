@@ -49,6 +49,25 @@ export class AppComponent {
         }
     }
 
+    //CAMBIAR TITULO DE SECCION
+    changeTitle(): string {
+        let title = 'Title';
+
+        switch (this.numSection) {
+            case 1:
+                title = 'About me';
+                break;
+            case 2:
+                title = 'Skills';
+                break;
+            case 3:
+                title = "Featured work"
+                break;
+        }
+
+        return title;
+    }
+
     @HostListener('window:keydown', ['$event'])
     handleKeyboardEvent(event: KeyboardEvent) {
         if (event.key === 'ArrowUp' || event.key === 'w') {
