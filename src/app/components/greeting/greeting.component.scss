@@ -78,7 +78,35 @@
         background-color: $light;
         color: $dark;
     }
+    .contact {
+        gap: 32px;
+        justify-content: center;
+
+        $brandsColors: (
+            github: $dark4,
+            linkedin: $blue,
+            instagram: $purple,
+            whatsapp: $green,
+        );
+        
+        a {
+            text-decoration: none;
+            font-size: 22px;
+
+            .fi-sr-envelope:hover {
+                color: $yellow;
+            }
+            i{
+                @each $brand, $color in $brandsColors{
+                    &.fi-brands-#{$brand}:hover {
+                        color: $color;
+                    }
+                }
+            }
+        }
+    }
 }
+
 @keyframes nameFonts {
     0% {
         font-family: 'Geologica', sans-serif;
