@@ -47,6 +47,9 @@ nav {
     .currentSection {
         background-color: $purple;
         color: $dark;
+        i {
+            color: $dark;
+        }
     }
     i {
         position: relative;
