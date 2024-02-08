@@ -1,24 +1,24 @@
 @import '../../../../colors';
 
 nav {
+    position: relative;
     justify-content: space-between;
     margin: 16px;
     padding: 8px;
     border-radius: 8px;
     background-color: $dark2;
 
-    div{
+    div {
         gap: 4px;
         flex: 1;
     }
     .navigation {
         justify-content: center;
     }
-    .more{
+    .more {
         justify-content: end;
     }
-    button,
-    a {
+    button {
         margin: 0;
         padding: 0 8px;
         border-radius: 4px;
@@ -30,8 +30,7 @@ nav {
         text-decoration: none;
         text-align: center;
     }
-    button:hover,
-    a:hover {
+    button:hover {
         background-color: $purple;
         color: $dark;
         i {
@@ -47,6 +46,7 @@ nav {
     .currentSection {
         background-color: $purple;
         color: $dark;
+        border-color: $purple;
         i {
             color: $dark;
         }
@@ -56,4 +56,62 @@ nav {
         top: 3px;
         font-size: 24px;
     }
+    .contactMe {
+        position: absolute;
+        flex-direction: column-reverse;
+        right: 0;
+        bottom: calc(100% + 16px);
+        gap: 16px;
+
+        .socials,
+        .email {
+            border-radius: 8px;
+            padding: 8px 16px;
+        }
+        .socials {
+            gap: 32px;
+            background-color: $dark2;
+
+            $brandsColors: (
+                github: $dark4,
+                linkedin: $blue,
+                instagram: $purple,
+                whatsapp: $green,
+            );
+
+            a {
+                text-decoration: none;
+
+                .fi-sr-envelope:hover {
+                    color: $yellow;
+                }
+                i {
+                    font-size: 22px;
+                    @each $brand, $color in $brandsColors{
+                        &.fi-brands-#{$brand}:hover {
+                            color: $color;
+                        }
+                    }
+                }
+            }
+        }
+        .email {
+            justify-content: space-between;
+            align-items: center;
+            background-color: $yellow;
+            cursor: pointer;
+
+            p {
+                font-size: 14px;
+                color: $dark;
+            }
+            i {
+                font-size: 18px;
+                color: $dark;
+            }
+        }
+    }
+}
+.hidden {
+    display: none;
 }

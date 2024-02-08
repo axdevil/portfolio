@@ -8,7 +8,24 @@
         <button [class.currentSection]="numSection === 3" (click)="changeSection(3)">Featured Work</button>
     </div>
     <div class="more">
-        <button class="contactButton" [hidden]="!(numSection > 0)">Contact me</button>
+        <button (click)="toggleContactMe()" [class.currentSection]="visibleContacts" class="contactButton" [hidden]="!(numSection > 0)">Contact me</button>
         <button><i class="fi fi-sr-sun"></i></button>
+    </div>
+    <div (mouseleave)="toggleContactMe()" [class.hidden]="(!visibleContacts || numSection === 0)" class="contactMe">
+        <div class="socials shadow">
+            <a href="mailto:jorgegarciadev@outlook.com"><i class="fi fi-sr-envelope"></i></a>
+            <a href="https://www.github.com/GRJorge"><i class="fi fi-brands-github"></i></a>
+            <a href="https://www.linkedin.com/in/jorgegarciarod"><i class="fi fi-brands-linkedin"></i></a>
+            <a href="https://www.instagram.com/jorgeax23"><i class="fi fi-brands-instagram"></i></a>
+            <a href="https://wa.me/523481143851"><i class="fi fi-brands-whatsapp"></i></a>
+        </div>
+        <div class="email shadow" (click)="copyEmail()">
+            <p>{{"jorgegarciadev@outlook.com"}}</p>
+                @if (emailCopied) {
+                    <i class="fi fi-sr-check"></i>
+                } @else {
+                    <i class="fi fi-sr-copy-alt"></i>
+                }
+        </div>
     </div>
 </nav>
