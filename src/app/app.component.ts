@@ -15,7 +15,7 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    numSection = 1;
+    numSection = 0;
 
     setSection(section: number) {
         this.numSection = section;
