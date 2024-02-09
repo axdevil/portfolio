@@ -87,7 +87,7 @@ nav {
                 }
                 i {
                     font-size: 22px;
-                    @each $brand, $color in $brandsColors{
+                    @each $brand, $color in $brandsColors {
                         &.fi-brands-#{$brand}:hover {
                             color: $color;
                         }

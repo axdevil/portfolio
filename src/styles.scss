@@ -36,8 +36,11 @@ i {
     position: relative;
     top: 2px;
 }
-button {
+button,
+a,
+i {
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .mono {
