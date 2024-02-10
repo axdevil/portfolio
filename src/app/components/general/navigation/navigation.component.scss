@@ -9,8 +9,8 @@ nav {
     background-color: $dark2;
 
     div {
-        gap: 4px;
         flex: 1;
+        gap: 4px;
     }
     .navigation {
         justify-content: center;
@@ -114,4 +114,37 @@ nav {
 }
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 880px) {
+    nav {
+        margin: 8px;
+        gap: 4px;
+
+        div {
+            gap: 4px;
+
+            button {
+                font-size: 12px;
+                padding: 0 4px;
+            }
+        }
+        .contactMe {
+            gap: 8px;
+            bottom: calc(100% + 8px);
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    nav {
+        .greet {
+            flex: 0;
+        }
+        .navigation {
+            justify-content: flex-start;
+        }
+        .more {
+            flex-grow: 1;
+        }
+    }
 }
