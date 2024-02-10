@@ -122,3 +122,46 @@
         line-height: 16px;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        .image {
+            height: 170px + 32px;
+            width: 170px + 32px;
+
+            div {
+                height: 170px + 32px;
+                width: 170px + 32px;
+            }
+            img {
+                height: 170px;
+                width: 170px;
+            }
+        }
+        .me {
+            align-items: center;
+
+            p {
+                text-align: center;
+            }
+        }
+        .light {
+            color: $light;
+            font-size: 30px;
+        }
+        .name {
+            font-size: 30px;
+        }
+        .blue {
+            font-size: 28px;
+        }
+        .thin {
+            font-size: 20px;
+        }
+    }
+}
