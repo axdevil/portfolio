@@ -36,10 +36,44 @@ section {
             padding: 8px;
             align-items: center;
             border-radius: 8px;
+            gap: 16px;
 
+            span {
+                white-space: nowrap;
+                font-size: 12px;
+            }
             i {
                 font-size: 16px;
                 color: $yellow;
+            }
+        }
+    }
+}
+@media screen and (max-width: 880px) {
+    section {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 580px) {
+    section {
+        width: calc(100% - 16px);
+        gap: 8px;
+
+        > div {
+            gap: 8px;
+        }
+        h1 {
+            font-size: 22px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .awards {
+            p {
+                text-align: start;
             }
         }
     }
