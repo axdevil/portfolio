@@ -16,7 +16,7 @@
         width: 190px + 32px;
         background: linear-gradient($red, $blue);
         border-radius: 50%;
-        animation: gradient 8s linear infinite;
+        animation: gradient 6s linear infinite;
     }
     img {
         position: absolute;
@@ -54,6 +54,8 @@
         color: $green;
         font-weight: 700;
         font-size: 36px;
+        animation: nameAnimation 8s step-end infinite;
+        white-space: nowrap;
     }
     .blue {
         color: $blue;
@@ -86,7 +88,7 @@
             instagram: $purple,
             whatsapp: $green,
         );
-        
+
         a {
             text-decoration: none;
             font-size: 22px;
@@ -94,13 +96,29 @@
             .fi-sr-envelope:hover {
                 color: $yellow;
             }
-            i{
-                @each $brand, $color in $brandsColors{
+            i {
+                @each $brand, $color in $brandsColors {
                     &.fi-brands-#{$brand}:hover {
                         color: $color;
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes nameAnimation {
+    0% {
+        font-family: 'Geologica', sans-serif;
+    }
+    25% {
+        font-family: 'Times New Roman', serif;
+    }
+    50% {
+        font-family: monospace;
+    }
+    75% {
+        font-family: cursive;
+        line-height: 16px;
     }
 }
