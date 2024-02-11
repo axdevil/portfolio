@@ -5,14 +5,16 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
+    margin: 16px;
 
     .category {
         flex-direction: column;
         background-color: $dark2;
         padding: 16px;
-        height: max-content;
         gap: 8px;
         border-radius: 8px;
+        justify-content: center;
+        align-items: center;
 
         span {
             font-family: "Chivo Mono";
@@ -21,6 +23,35 @@ section {
         }
         div {
             gap: 8px;
+        }
+    }
+}
+@media screen and (max-width: 880px){
+    section {
+        gap: 8px;
+
+        .category {
+            padding: 8px;
+            flex: 1;
+
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 580px) {
+    section {
+        margin: 8px;
+        flex-direction: column;
+        align-items: stretch;
+        
+        .category {    
+
+            > div {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
         }
     }
 }

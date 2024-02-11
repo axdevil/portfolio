@@ -14,7 +14,7 @@
     .tag {
         position: absolute;
         width: 100%;
-        height: 64px;
+        height: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -27,6 +27,48 @@
         .percentage {
             color: $light3;
             font-size: 13px;
+        }
+    }
+}
+@media screen and (max-width: 1050px){
+    .box {
+        width: 100px;
+        height: 52px;
+
+        .progress {
+            height: 52px;
+        }
+        .tag {
+            gap: 2px;
+
+            .name {
+                font-size: 14px;
+            }
+            .percentage {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .box {
+        height: 30px;
+
+        .progress {
+            height: 30px;
+        }
+        .tag {
+            flex-direction: row;
+            width: calc(100% - 8px);
+            margin-left: 4px;
+            gap: 4px;
+
+            .name {
+                font-size: 12px;
+            }
+            .percentage {
+                font-size: 11px;
+            }
         }
     }
 }
