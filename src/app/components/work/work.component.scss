@@ -1,3 +1,9 @@
 section {
     flex-direction: column;
+    
+    div {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
