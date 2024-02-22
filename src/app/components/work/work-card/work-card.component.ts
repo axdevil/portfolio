@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
     styleUrl: './work-card.component.scss',
 })
 export class WorkCardComponent {
+    @Input() name!: string;
     @Input() image!: string;
     @Input() description!: string;
     @Input() tags!: [string];
