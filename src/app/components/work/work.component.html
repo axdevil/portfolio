@@ -1,7 +1,7 @@
 <section>
     <div>
         @for (work of workData; track work.name) {
-            <work-card [image]="work.image" [description]="work.description" [tags]="work.tags" [webpage]="work.webpage" />
+            <work-card [name]="work.name" [image]="work.image" [description]="work.description" [tags]="work.tags" [webpage]="work.webpage" />
         }
     </div>
 </section>
