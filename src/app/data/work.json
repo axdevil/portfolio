@@ -5,5 +5,12 @@
         "description": "Video game created in seven days for the game jam 'Tu juego a juicio Jam' with the theme 'too long'.",
         "tags": ["GDScript", "Godot Engine", "Inkscape"],
         "webpage": "https://staid-cat.itch.io/ghostlike"
+    },
+    {
+        "name": "Supertheme Polybar",
+        "image": "null",
+        "description": "Theme for Polybar with Music Player Deamon",
+        "tags": ["Linux", "Shell", "Window Manager", "Polybar"],
+        "webpage": "https://github.com/GRJorge/supertheme-polybar"
     }
 ]
