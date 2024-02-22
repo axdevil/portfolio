@@ -1,5 +1,9 @@
 <div class="card">
-    <img class="shadow" src="assets/work/{{ image }}">
+    @if (image === "null") {
+        <div class="title">{{ name }}</div>
+    }@else {
+        <img class="shadow" src="assets/work/{{ image }}"> 
+    }
 
     <div class="info">
         <p>{{ description }}</p>
